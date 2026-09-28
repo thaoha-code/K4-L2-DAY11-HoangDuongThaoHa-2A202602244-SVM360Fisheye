@@ -1,1 +1,15 @@
-round,slice,frame,object_ref,cell,what,why,severity,owner,rule_id,evidence,action,rules_version,note
+round,slice,frame,object_ref,zone,cell,what,why,severity,owner,action,rule_id,evidence,rules_version,note
+r1_craft,B3-dense,adasind_167700.jpg,L11,center,LR_noM,WRONG_CLASS,E2_guideline_gap,P1,guideline,escalate,R04,compare.html L11 vs R4 khac class,v1.0.0,So sanh P1 truoc khi co model
+r1_craft,B3-dense,adasind_167700.jpg,L3,mid,L_only,SPURIOUS,E1_annotator_error,P1,annotator,rework,R02,compare.html L3 chong lan L1 L2,v1.0.0,Box thua nghi trung vat da co
+r1_craft,B3-dense,adasind_199770.jpg,L6,mid,L_only,STRUCTURE,E1_annotator_error,P0,annotator,rework,R07,ignore_region ve dang box thay vi polygon,v1.0.0,Sai dinh dang hinh hoc
+r2_qa,B3-dense,adasind_167700.jpg,L3,mid,L_only,SPURIOUS,,P1,qa,escalate,R02,qa_review.md dong 1,v1.0.0,QA mu nghi box thua
+r2_qa,B3-dense,adasind_167700.jpg,L11,center,L_only,WRONG_CLASS,,P1,qa,escalate,R04,qa_review.md dong 2,v1.0.0,QA mu nghi sai class
+r2_qa,B3-dense,adasind_199770.jpg,L6,mid,L_only,STRUCTURE,,P0,qa,escalate,R07,qa_review.md dong 3,v1.0.0,QA mu phat hien sai dinh dang
+r3_diag,B3-dense,adasind_167700.jpg,L11,center,LRM,WRONG_CLASS,E2_guideline_gap,P1,guideline,escalate,R04,local_quality confusion matrix Car sang Truck,v1.0.0,Xac nhan bang so lieu dinh luong
+r3_diag,B3-dense,adasind_167700.jpg,L3,mid,LM_noR,SPURIOUS,E1_annotator_error,P1,annotator,rework,R02,model_compare.md L3 khong co trong R,v1.0.0,L va M deu thay nhung R khong co
+r3_diag,B3-dense,adasind_199770.jpg,R3,edge,RM_noL,MISSING,E1_annotator_error,P1,annotator,rework,R01,compare.html R3 Pedestrian bi bo sot,v1.0.0,Vung edge de bo sot
+r3_diag,B3-dense,adasind_199770.jpg,R4,edge,RM_noL,MISSING,E1_annotator_error,P1,annotator,rework,R01,compare.html R4 ThreeWheeler bi bo sot,v1.0.0,Vung edge de bo sot
+r3_diag,B3-dense,adasind_199770.jpg,R5,edge,RM_noL,MISSING,E1_annotator_error,P1,annotator,rework,R01,compare.html R5 Bike bi bo sot,v1.0.0,Bike nho de bo sot
+r3_diag,B3-dense,adasind_167700.jpg,R2,edge,RM_noL,MISSING,E1_annotator_error,P1,annotator,rework,R01,compare.html R2 Bike lon bi bo sot,v1.0.0,Kich thuoc lon van bi bo sot
+r3_diag,B3-dense,adasind_199770.jpg,L6,mid,M_only,IGNORE_SCOPE,E1_annotator_error,P0,annotator,rework,R07,local_quality ignore_region FP precision 0,v1.0.0,Sai dinh dang gay khong ghep duoc
+r3_diag,B3-dense,adasind_199770.jpg,L8,edge,LRM,ATTRIBUTE,E5_unresolved,P2,qa,keep_with_reason,R05,ThreeWheeler sat mep trai can kiem truncated,v1.0.0,Can nguoi soat thu hai xac nhan

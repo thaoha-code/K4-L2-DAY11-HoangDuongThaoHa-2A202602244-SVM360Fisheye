@@ -1,1 +1,6 @@
 id,date,question,decision,rationale,status
+1,2026-09-28,Co nen giu 30 polyline parking_line hay xoa bot?,Giu nguyen 30 polyline,Deu la vach chia o do hop le theo quan sat tren anh core,resolved
+2,2026-09-28,Object L11 (167700) la Car hay Truck?,Danh dau WRONG_CLASS va de xuat rule moi,Confusion matrix xac nhan sai lech nhung rule hien tai chua co tieu chi hinh hoc ro,escalated
+3,2026-09-28,ignore_region ve dang box (L6 199770) co giu hay xoa?,Xoa va yeu cau ve lai bang polygon,Box khong dung dinh dang lam FP 100% trong local-quality,resolved
+4,2026-09-28,Co rework tat ca 4 vat MISSING vung edge (199770) khong?,Uu tien rework vi severity P1 va nam trong action=rework cua findings,Vung edge co ty le missing cao nhat (50%) can uu tien sua truoc,resolved
+5,2026-09-28,Bike recall thap 0.500 co can bao Lab Coach khong?,Ghi escalation ticket cho annotator tu sua qua self-QC checklist moi,Chua du bang chung de ket luan loi he thong tu model hay data,escalated

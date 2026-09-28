@@ -1,18 +1,32 @@
-# Đề xuất gold set theo camera — tình huống giả lập
+# Gold Set Plan — SVM 4 Camera
 
-**Đầu bài:** 50.000 frame từ bốn camera SVM, ngân sách chọn 200 frame để review/gold. Đây là tình huống trên slide,
-**không phải** 50.000 frame có trong repo. Phân bổ đúng 200 ở `45_sampling_plan.csv` cho bốn camera, mỗi camera có
-normal và hard slice. “Gold set” ở đây là **kế hoạch tạo** reference sau kiểm chứng, không phải teaching reference
-ADASIND hoặc nhãn bạn vừa vẽ. Nếu cần, dùng `notebooks/day11-svm360-colab.ipynb` để thử tổng phân bổ; notebook
-không làm thay phần lý do.
+## Mục tiêu
 
-| camera_id | Hard case cần chọn | Vì sao dễ sai | Annotation space / calibration cần giữ | Cách review trước khi gọi là gold |
-|---|---|---|---|---|
-| front | TODO | TODO | TODO | TODO |
-| rear | TODO | TODO | TODO | TODO |
-| left | TODO | TODO | TODO | TODO |
-| right | TODO | TODO | TODO | TODO |
+Chọn 200 frame đại diện cho 4 camera × 2 điều kiện từ 50.000 frame giả lập,
+đảm bảo coverage đủ các ca khó đặc thù từng camera.
 
-- Khi nào cần refresh gold set (đổi camera, calibration hoặc rule): TODO
-- Một ca seam/cross-camera cần policy và evidence trước khi ghép hai box: TODO
-- Vì sao peer agreement hoặc quality report trên ảnh một camera chưa chứng minh gold set đúng cho cả bốn camera: TODO
+## Phân bổ frame (xem 45_sampling_plan.csv)
+
+| Camera          | Normal       | Hard          | Tổng         |
+| --------------- | ------------ | ------------- | ------------- |
+| Front           | 20           | 25            | 45            |
+| Rear            | 20           | 35            | 55            |
+| Left            | 20           | 30            | 50            |
+| Right           | 20           | 30            | 50            |
+| **Tổng** | **80** | **120** | **200** |
+
+## Lý do phân bổ hard nhiều hơn normal
+
+- Rear/hard nhiều nhất (35): vật thấp bị ego_body che là lỗi nguy hiểm nhất
+- Left/hard và Right/hard (30): vòng kính fisheye cắt vật, người đi bộ sát xe
+- Front/hard ít hơn (25): trường nhìn rộng hơn, lỗi ít nghiêm trọng hơn rear
+
+## Tiêu chí loại frame
+
+- Frame quá tối hoặc quá sáng không phân biệt được vật
+- Frame liên tiếp giống nhau >80% (chọn 1 trong chuỗi đó)
+- Frame không có vật nào trong vùng hợp lệ
+
+## Cập nhật sau P4
+
+*(Bổ sung sau khi hoàn thành diagnosis — ghi lỗi thực tế ảnh hưởng tiêu chí chọn frame)*

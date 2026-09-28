@@ -1,9 +1,9 @@
 camera_id,slice_type,frames,risk,rationale
-front,normal,,TODO,TODO
-front,hard,,TODO,TODO
-rear,normal,,TODO,TODO
-rear,hard,,TODO,TODO
-left,normal,,TODO,TODO
-left,hard,,TODO,TODO
-right,normal,,TODO,TODO
-right,hard,,TODO,TODO
+front,normal,20,low,Duong thang thoang it vat can nguoi di bo ro
+front,hard,25,medium,Nguoc sang buoi sang chieu xe cat ngang gan seam
+rear,normal,20,low,Lui vao bai do trong it vat thap
+rear,hard,35,high,Vat thap sat than xe ego_body che khuat goc nhin
+left,normal,20,low,Xe do song song vach ro it bien dong
+left,hard,30,high,Sat le vong kinh fisheye cat vat truncated
+right,normal,20,low,Bai do thoang tuong tu left dieu kien binh thuong
+right,hard,30,high,Nguoi di bo va xe hai banh xuat hien sat cua xe
